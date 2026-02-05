@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  user-select: none; /* Prevent text selection */
+  -webkit-user-select: none;
+}
+
+img {
+  -webkit-user-drag: none; /* Prevent image dragging */
+  user-select: none;
+  pointer-events: none; /* Prevent right-click on image directly (clicks pass to parent) */
+}
